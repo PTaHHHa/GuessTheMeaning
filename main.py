@@ -2,12 +2,13 @@ def get_key_by_value(value, dic):
     for k in dic.items():
         if value == k[1]:
             print(k[0])
+            exit()
 
 
 def main(sentence: str):
     if len(sentence) < 1:
         raise ValueError('Sentence should have at least two words')
-    elif isinstance(sentence, str):
+    elif not isinstance(sentence, str):
         raise TypeError(f'{type(sentence)} is not allowed')
 
     dic = {'Power as nuclear': ['nuclear', 'fukushima', 'renewable',
