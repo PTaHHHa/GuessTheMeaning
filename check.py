@@ -16,13 +16,13 @@ def check(i, sentence: str):
         # ,что такой тип данных нельзя использовать
         raise TypeError(f'{type(sentence)} is not allowed')
     if sentence.strip().lower() != i[1]:
-        print('You passed the failed :(')
+        print('You failed the test :(')
         exit()
 
 
 def main():
     for i in sentence_list.items():
-        print(i[0])
+        print('\n'+i[0])
         input_sentence = input('Input your answer: ')
         check(i, input_sentence)
 
